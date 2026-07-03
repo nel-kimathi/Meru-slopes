@@ -26,7 +26,8 @@
     "tailwind-merge": "^3.6.0"
   },
   "overrides": {
-    "@sanity/client": "^7.23.0"
+    "@sanity/client": "^7.23.0",
+    "@sanity/ui": "^2.16.7"
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.3.0",
