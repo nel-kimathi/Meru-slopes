@@ -1,0 +1,20 @@
+export default {
+  name: "room",
+  title: "Rooms & Suites",
+  type: "document",
+  fields: [
+    { name: "name", title: "Name", type: "string", validation: (Rule: any) => Rule.required() },
+    { name: "slug", title: "Slug", type: "slug", options: { source: "name" } },
+    { name: "shortDescription", title: "Short Description", type: "text", rows: 2 },
+    { name: "description", title: "Full Description", type: "blockContent" },
+    { name: "heroImage", title: "Hero Image", type: "image", options: { hotspot: true } },
+    { name: "gallery", title: "Gallery", type: "array", of: [{ type: "image", options: { hotspot: true } }] },
+    { name: "amenities", title: "Amenities", type: "array", of: [{ type: "string" }] },
+    { name: "bedConfig", title: "Bed Configuration", type: "string" },
+    { name: "view", title: "View", type: "string" },
+    { name: "maxGuests", title: "Max Guests", type: "number" },
+    { name: "size", title: "Room Size", type: "string" },
+    { name: "priceFrom", title: "Price From (KES)", type: "number" },
+    { name: "featured", title: "Featured on Home", type: "boolean" },
+  ],
+};

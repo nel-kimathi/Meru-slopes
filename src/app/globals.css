@@ -1,0 +1,52 @@
+@import "tailwindcss";
+
+@theme {
+  --color-ivory: #F5F0E8;
+  --color-ivory-light: #FAF7F2;
+  --color-ivory-dark: #E8E0D4;
+  --color-charcoal: #2C2C2C;
+  --color-charcoal-light: #4A4A4A;
+  --color-charcoal-muted: #6B6B6B;
+  --color-terracotta: #C1694F;
+  --color-terracotta-light: #D48A72;
+  --color-terracotta-dark: #A8543C;
+  --color-forest: #2D5A3D;
+  --color-forest-light: #3E7A54;
+  --color-brass: #B8975A;
+  --color-brass-light: #D4B87A;
+  --color-sand: #D4C5A9;
+  --color-sand-light: #E4D9C5;
+
+  --font-serif: "Playfair Display", Georgia, "Times New Roman", serif;
+  --font-sans: Inter, "Helvetica Neue", Arial, sans-serif;
+
+  --spacing-section: 6rem;
+  --spacing-section-mobile: 3rem;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    @apply bg-ivory text-charcoal font-sans antialiased;
+  }
+
+  h1, h2, h3, h4 {
+    @apply font-serif;
+  }
+
+  ::selection {
+    @apply bg-terracotta/20 text-charcoal;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
